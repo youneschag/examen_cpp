@@ -28,7 +28,7 @@ int main() {
     cout << "\nList of animals in " << Zoo.getName() << " after removing Leo:\n";
 
     Zoo.listAnimals();
-    
+
     // Recherche d'un animal par son nom
     string searchName = "Polly";
     int foundIndex = Zoo.searchAnimalByName(searchName);
@@ -45,6 +45,8 @@ int main() {
     Zoo.addAnimal(canary);
     Zoo.addAnimal(tiger);
 
+    Zoo.listAnimals();
+
     // Calcul de la moyenne d'âge pour un type spécifique
     cout << "\nAverage age for the type 'Bird': " << Zoo.averageAgeForType("Bird") << " years\n";
 
@@ -52,6 +54,8 @@ int main() {
     Reptile* Seahorse = new Reptile("Reptile", "George", "Green", "Rodents", "Forest", "Hiss", true, 5, 2.5, 0.9, "Striped");
 
     Zoo.addAnimal(Seahorse);
+
+    Zoo.listAnimals();
 
     return 0;
 }

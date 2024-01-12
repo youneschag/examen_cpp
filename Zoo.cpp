@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Zoo::Zoo() : name("Default Zoo"), animals(std::vector<Animal*>()) {}
+Zoo::Zoo() : name(""), animals(std::vector<Animal*>()) {}
 
 Zoo::Zoo(const string& name) : name(name), animals(vector<Animal*>()) {}
 
@@ -22,6 +22,7 @@ void Zoo::listAnimals() const {
 
 bool Zoo::addAnimal(Animal* newAnimal) {
     if (animals.size() >= MAX_CAPACITY) {
+        cout << "L'animal avec le nom' " << newAnimal << " ne peut pas être ajouté dans le Zoo.\n";
         return false;
     } //le zoo n'a pas encore atteint sa capacité maximale
 
